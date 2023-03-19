@@ -83,7 +83,7 @@ class GraphMultiConvolution(nn.Module):
 
 class PDGGNN(nn.Module):
     def __init__(self, d, c, args, device):
-        super(GINN, self).__init__()
+        super(PDGGNN, self).__init__()
         self.convs = nn.ModuleList()
         for _ in range(args.num_layers):
             self.convs.append(GraphMultiConvolution(args.hidden_channels, args.hidden_channels, args.K, variant=args.variant,residual=True, device=device))
